@@ -1,26 +1,31 @@
-
 body{
     margin-left: 100px;
     margin-right: 100px;
-    font-family: serif;
+    font-family:  serif;
 }
 .header{
     background-color: #f9e6d9;
     display: flex;
-    height: 300px;
+    height: 400px;
     justify-content: space-between;
 }
 h1{
-    margin-top: 110px;
-    font-size: 80px;
-    text-align: bottom;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    font-size: 140px;
+    text-align: center;
 }
 .logo{
     height: 100px;
+    margin-top: 30px;
+    margin-left: 30px;
     
 }
 .gornji{
-    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
 }
 
 .katalog{
@@ -33,18 +38,21 @@ h1{
     padding-top: 20px;
 }
 .donji{
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 .footer{
+    
     background-color: #f9e6d9;
-    height: 150px;
+    height: 200px;
     text-align: center;
+    font-size: 15px;
     
 }
 .beauty{
-    font-size: 25px;
+    padding-top: 0.05px;
+    font-size: 30px;
 }
 .stranica{
     font-weight: bolder;
