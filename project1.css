@@ -115,6 +115,8 @@ button:hover{
     position:relative;
     top: 200px;
     left: 200px;
+    transition: all 0.5s;
+    transition-timing-function: 0.5s;
 
 }
 
@@ -137,6 +139,7 @@ button:hover{
     background-color: #002147;
     transition: 0,5s;
     border: 1px solid black;
+    transform: scale(1.1);
 }
 
 .sector2{
@@ -150,6 +153,8 @@ button:hover{
     position:relative;
     top: 500px;
     left: 200px;
+    transition: all 0.5s;
+    transition-timing-function: 0.5s;
 }
 .forthnews img {
     width: 1000px;
@@ -180,6 +185,7 @@ button:hover{
     background-color: #002147;
     transition: 0,5s;
     border: 1px solid black;
+    transform: scale(0.9);
 }
 .forthnews .seemore{
     border: 3px solid white;
@@ -192,22 +198,30 @@ button:hover{
     text-decoration: none;
 }
 
-.sector2{
+.sector3{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .fifthnews {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border: 1px solid grey;
     margin: 20px;
-    width: 1500px;
+    width: 1000px;
     position:relative;
     top: 500px;
-    left: 200px;
+    left: 450px;
+    transition: all 0.5s;
+    transition-timing-function: 0.5s;
 }
 .fifthnews img {
     width: 1000px;
     height: 600px;
-   
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
 .fifthnews  .bigdescription{
     color: white;
@@ -215,7 +229,7 @@ button:hover{
     padding-top: 5px;
     font-size: 40px;
     font-weight: bolder;
-    text-align: right;
+    text-align: left;
 
 }
 .fifthnews .littledescription{
@@ -224,7 +238,7 @@ button:hover{
     padding-top: 50px;
     font-size: 20px;
     font-weight: 1300;
-    text-align: right;
+    text-align: left;
 
 
 }
@@ -233,4 +247,14 @@ opacity: calc(80%);
 background-color: #002147;
 transition: 0,5s;
 border: 1px solid black;
+transform: scale(0.9);
 }
+.footer{
+    position: relative;
+    top: 500px;
+    text-align: center;
+    background-color: #002B6B;
+    color: white;
+    font-size: large;
+}
+
