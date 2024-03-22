@@ -1,0 +1,93 @@
+body{
+    margin: 0;/* da ne bi header se odvajao od body*/
+    padding: 0;/* isto kao margin*/
+    background-image: linear-gradient(to right,#002147,#4169E1);/* background color*/
+    background-repeat: no-repeat;/* da se ne pojavljaju dvije kombinacije nego samo jednom*/
+    background-attachment: fixed;/*da li je background ostaje na istom mjestu ne bitno dal skrolujemo */
+    
+}
+.header{
+    display: flex;/* koristimo da moze linija justify da radi*/
+    justify-content: space-between;/* da evenly izmedu slika ili texta postavlja*/
+    align-items: center;/*da text bude centriran */
+    background-color: #002B6B;/*boja */
+    border-bottom: 1px solid white;/*tabla ili border koji koristimo za header */
+    height: 150px;/*velicina headera */
+}
+.gaming{
+    color: white;/* boja*/
+    display: flex;/*ne znam */
+    font-family: 'Courier New', Courier, monospace;/*tip fonta za text */
+    font-size: 50px;/*velicina fonta */
+    margin-right: 50px;/*kolko je udaljen od desne strane */
+    margin-top: 30px;/*od gornje */
+}
+.gaming a{   
+     text-decoration: none;/*da nema liniju ispod */
+}
+.gaming:hover{
+    color: lightgray;/*boja */
+    border-bottom: 1px solid white;/*border za hover */
+}
+.logo1{
+    text-align: left;/*da centrira je lijevo */
+    display: block;/*da se ne mrda */
+    width: 100%;/*sirina */
+    margin-top: 30px;/*odmakne sa gornje strane */
+    margin-left: 30px;/*sa lijeve strane */
+}
+
+a:link{
+    color: white;/*boja */
+}
+a:visited{
+    color: black/*boja */
+    ;
+}
+
+a:active{
+    color: #ffd1dc;/*boja  */
+}
+.section1{
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 200px; /* Set height for container */
+}
+.naslov{
+    color:lightgray;/*boja */
+    font-size: 60px;/*velicina teksta */
+    text-align: center;/*centrira se tekst */
+
+}
+.autor{
+    color: white;
+    margin-left: 150px;
+
+}
+.slika{
+    text-align: center;
+    position: relative;
+    
+}
+.text{
+    color: white;/*boja */
+    font-size: 20px;/*velicina teksta  */
+    margin-left: 150px;/*koliko je odvojen tekst od uglova stranice */
+    text-align: left;/*lijevu stranu stavljamo tekst */
+    white-space: normal;/* kolko moze teksta bit dok ne ode u drugu liniju*/
+}
+.icon{
+    color: white;
+    margin-left: 470px;
+}
+.slika2{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+.ime{
+    color: white;
+    position: relative;
+    text-align: center; /* Center the text */
+    
+}

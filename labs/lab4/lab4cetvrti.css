@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right,#7A52CC,#BF55C2);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+form h2{
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+#dugme{
+    margin-top: 10px;
+    width: 350px;
+    height: 50px;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 150px;
+}
+#email{
+    width: 350px;
+    padding: 25px;
+    background-color: lightgrey;
+    color: white;
+    border: none;
+    border-radius: 150px;
+    background-image: url('/images/email.png'); /* Replace with the path to your icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the position of the icon */
+    background-size: 20px; /* Set the size of the icon */
+}
+#pwd{
+    width: 350px;
+    padding: 25px;
+    background-color: lightgrey;
+    color: white;
+    border: none;
+    border-radius: 150px;
+    background-image: url('/images/lock.png'); /* Replace with the path to your icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the position of the icon */
+    background-size: 20px; /* Set the size of the icon */
+}
+
+.icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This ensures the container takes up the full height of the viewport */
+}
+
+.row {
+    margin-top: -100px; /* Adjust this value based on your layout */
+}
+
+.col-md-4 {
+    margin-right: 70px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 400px; /* Adjust this value to set the maximum width of the form */
+}
+.inputbox{
+    background-color: #f5f5f5; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+.create{
+    margin-right: 55px;
+    margin-top: 50px;
+}
+.tabla{
+    background-color: white;
+    height: 99%;
+    width: 95%;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}

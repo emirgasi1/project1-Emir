@@ -1,0 +1,51 @@
+body {
+    background-image: url('/images/pexels.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ime input[type="text"] {
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+#ime input[type="text"]:hover {
+    border-bottom: 2px solid blue; 
+}
+
+#input_box input[type="text"],
+#input_box input[type="email"],
+#input_box input[type="tel"] {
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+#input_box input[type="text"]:hover,
+#input_box input[type="email"]:hover,
+#input_box input[type="tel"]:hover {
+    border-bottom: 2px solid blue; 
+}
+
+#input_box {
+    background-color: #f5f5f5; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.profile-picture {
+    width: 170px; 
+    height: 150px;
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+}

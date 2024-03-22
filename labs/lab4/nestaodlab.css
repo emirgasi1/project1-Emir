@@ -1,0 +1,37 @@
+
+#dugme{
+    margin-top: 30px;
+    width: 180px;
+    height: 50px;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+td i{
+    padding: 5px 12px;
+    margin-right: -5px;
+    border: 1px solid grey;
+
+}
+.allign {
+    display: flex;
+    align-items: center;
+}
+
+.allign .fa-pencil {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    padding: 24.5px; /* Adjust as needed */
+    margin-right: -5px; /* Adjust as needed */
+    border: 1px solid grey; /* Set the border */
+}
+
+.allign textarea {
+    flex: 1;
+    padding: 10px; /* Adjust as needed */
+    border: 1px solid grey; /* Set the border */
+}
+
+
