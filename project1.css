@@ -124,9 +124,9 @@ button:hover{
     font-weight: bolder;
     font-weight: bolder;
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
-    overflow: hidden; /* Hide overflowed text */
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
 }
 
 .allnews:hover {
@@ -145,23 +145,22 @@ button:hover{
     display: flex;
     border: 1px solid grey;
     margin: 20px;
-    width: 1200px; /* Adjust width as needed */
+    width: 1200px; 
     position: relative;
-    top: 500px;
     left: 15px;
     transition: all 0.5s;
     transition-timing-function: 0.5s;
 }
 
 .forthnews img {
-    width: 800px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 800px; 
+    height: auto; 
 }
 
 .forthnews .bigdescription {
     color: white;
     padding: 10px;
-    font-size: 20px; /* Adjust font size as needed */
+    font-size: 20px; 
     font-weight: bolder;
     text-align: right;
 }
@@ -169,13 +168,13 @@ button:hover{
 .forthnews .littledescription {
     color: white;
     padding: 10px;
-    font-size: 14px; /* Adjust font size as needed */
-    font-weight: bold; /* Adjust font weight as needed */
+    font-size: 14px; 
+    font-weight: bold; 
     text-align: right;
 }
 
 .forthnews:hover {
-    opacity: 0.8; /* Adjust opacity as needed */
+    opacity: 0.8; 
     background-color: #002147;
     border: 1px solid black;
     transform: scale(0.9);
@@ -184,7 +183,7 @@ button:hover{
 .forthnews .seemore {
     border: 3px solid white;
     text-align: center;
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 16px;
     padding: 5px;
 }
 
@@ -204,23 +203,22 @@ button:hover{
     align-items: flex-start;
     border: 1px solid grey;
     margin: 20px;
-    width: 1200px; /* Adjust width as needed */
+    width: 1200px; 
     position: relative;
-    top: 500px;
     left: 15px;
     transition: all 0.5s;
     transition-timing-function: 0.5s;
 }
 
 .fifthnews img {
-    width: 100%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
 }
 
 .fifthnews .bigdescription {
     color: white;
     padding: 10px;
-    font-size: 20px; /* Adjust font size as needed */
+    font-size: 20px; 
     font-weight: bolder;
     text-align: left;
 }
@@ -228,25 +226,475 @@ button:hover{
 .fifthnews .littledescription {
     color: white;
     padding: 10px;
-    font-size: 14px; /* Adjust font size as needed */
-    font-weight: bold; /* Adjust font weight as needed */
+    font-size: 14px; 
+    font-weight: bold; 
     text-align: left;
 }
 
 .fifthnews:hover {
-    opacity: 0.8; /* Adjust opacity as needed */
+    opacity: 0.8; 
     background-color: #002147;
     border: 1px solid black;
     transform: scale(0.9);
 }
 .footer {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     position: relative;
     text-align: center;
     top: 500px;
     background-color: #002B6B;
     color: white;
     font-size: large;
+}
+
+
+@media only screen and (min-width: 375px) {
+    .header {
+        height: auto;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigationbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigationbar .news {
+        margin: 0 10px;
+    }
+
+    .login {
+        float: none;
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #email,
+    #password {
+        display: block;
+        margin: 5px auto;
+    }
+
+    button {
+        margin: 5px auto;
+    }
+
+    .sector1,
+    .sector2,
+    .sector3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .allnews {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all 0.5s;
+        transition-timing-function: 0.5s;
+        width: 355px; /* Adjust width here */
+        max-width: 100%; /* Change to 100% to make it responsive */
+    }
+
+    .allnews img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .allnews .description {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .allnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.1);
+    }
+
+    .forthnews,
+    .fifthnews {
+        margin-top: 10px;
+        margin-right: 0;
+        margin-left: 5px;
+        width: 320px;
+        max-width: 100%; /* Change to 100% to make it responsive */
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all 0.5s;
+        transition-timing-function: 0.5s;
+    }
+
+    .forthnews img,
+    .fifthnews img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .forthnews .bigdescription,
+    .fifthnews .bigdescription {
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .forthnews .littledescription,
+    .fifthnews .littledescription {
+        display: none;
+    }
+
+    .forthnews:hover,
+    .fifthnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.05);
+    }
+
+    .footer {
+        top: auto;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .header {
+        height: auto;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigationbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigationbar .news {
+        margin: 0 10px;
+    }
+
+    .login {
+        float: none;
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #email,
+    #password {
+        display: block;
+        margin: 5px auto;
+    }
+
+    button {
+        margin: 5px auto;
+    }
+
+    .sector1,
+    .sector2,
+    .sector3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .allnews {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all 0.5s;
+        transition-timing-function: 0.5s;
+        width: 355px; /* Adjust width here */
+        max-width: 100%; /* Change to 100% to make it responsive */
+    }
+
+    .allnews img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .allnews .description {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .allnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.1);
+    }
+
+    .forthnews,
+    .fifthnews {
+        margin-top: 10px;
+        margin-right: 0;
+        margin-left: 5px;
+        width: 310px;
+        max-width: 100%; /* Change to 100% to make it responsive */
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all 0.5s;
+        transition-timing-function: 0.5s;
+    }
+
+    .forthnews img,
+    .fifthnews img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .forthnews .bigdescription,
+    .fifthnews .bigdescription {
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .forthnews .littledescription,
+    .fifthnews .littledescription {
+        display: none;
+    }
+
+    .forthnews:hover,
+    .fifthnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.05);
+    }
+
+    .footer {
+        top: auto;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        height: auto;
+        display: flex; /* Use flexbox to control the layout */
+        justify-content: space-between; /* Space items evenly */
+        align-items: center; /* Center items vertically */
+    }
+
+    .logo {
+        margin-left: 20px; /* Adjust margin-left to move the logo more to the left */
+    }
+
+    .navigationbar {
+        margin-right: 20px; /* Adjust margin-right for spacing on the right side */
+    }
+
+    .navigationbar .news {
+        margin: 0 15px; /* Adjust margins for spacing between navigation items */
+    }
+
+
+    #email,
+    #password {
+        display: block;
+        margin: 5px auto;
+    }
+
+    button {
+        margin: 5px auto;
+    }
+
+    .sector1,
+    .sector2,
+    .sector3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .allnews,
+    .forthnews,
+    .fifthnews {
+        width: 300px; /* Adjust width with margin */
+        max-width: 100%; /* Make it responsive */
+    }
+
+    .allnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.1);
+    }
+
+
+    .forthnews:hover,
+    .fifthnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.05);
+    }
+
+    .footer {
+        top: auto;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+    .header {
+        height: auto;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigationbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigationbar .news {
+        margin: 0 10px;
+    }
+
+    .login {
+        float: none;
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #email,
+    #password {
+        display: block;
+        margin: 5px auto;
+    }
+
+    button {
+        margin: 5px auto;
+    }
+
+    .sector1,
+    .sector2,
+    .sector3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .allnews {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all 0.5s;
+        transition-timing-function: 0.5s;
+        width: 355px; /* Adjust width here */
+        max-width: 100%; /* Change to 100% to make it responsive */
+    }
+
+    .allnews img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .allnews .description {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .allnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.1);
+    }
+
+    .forthnews,
+    .fifthnews {
+        margin-top: 10px;
+        margin-right: 0;
+        margin-left: 5px;
+        width: 230px;
+        max-width: 100%; /* Change to 100% to make it responsive */
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all 0.5s;
+        transition-timing-function: 0.5s;
+    }
+
+    .forthnews img,
+    .fifthnews img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .forthnews .bigdescription,
+    .fifthnews .bigdescription {
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .forthnews .littledescription,
+    .fifthnews .littledescription {
+        display: none;
+    }
+
+    .forthnews:hover,
+    .fifthnews:hover {
+        opacity: 0.8;
+        background-color: #002147;
+        transform: scale(1.05);
+    }
+
+    .footer {
+        top: auto;
+        margin-top: 10px;
+    }
 }
