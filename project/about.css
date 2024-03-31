@@ -11,7 +11,7 @@ html,body
 .header{
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure the header stays on top of other content */
+    z-index: 1000; 
     background-color: #0C3C60;
 }
 .logo img{
@@ -97,7 +97,7 @@ button:hover{
     font-weight: 400px;
     font-size: 50px;
     color: #0C3B5F;
-    margin-bottom: 20px; /* Add margin below the "About" text */
+    margin-bottom: 20px; 
 }
 
 .paragraph {
@@ -109,13 +109,13 @@ button:hover{
 
 .ljudi {
     margin-top: 70px;
-    float: right; /* Float the image to the right */
-    width: 100%; /* Set width for the image */
-    text-align: right; /* Align the image to the right */
+    float: right; 
+    width: 100%;
+    text-align: right; 
 }
 
 .ljudi img {
-    max-width: 100%; /* Ensure image fits container width */
+    max-width: 100%; 
     height: auto;
 }
 
@@ -196,9 +196,9 @@ button:hover{
         align-items: center;
     }
     .maps img {
-        max-width: 100%; /* Adjust to your preference */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Maintain aspect ratio and cover container */
+        max-width: 100%; 
+        height: auto; 
+        object-fit: cover;
     }
 }
 @media screen and (min-width: 310px) and (max-width: 416px) {
@@ -209,8 +209,8 @@ button:hover{
         font-size: 70px;
     }
     .partneri img {
-        max-width: 50%; /* Adjust to your preference */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 50%;
+        height: auto;
     }
     .maps {
         display: flex;
@@ -218,9 +218,9 @@ button:hover{
         align-items: center;
     }
     .maps img {
-        max-width: 100%; /* Adjust to your preference */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Maintain aspect ratio and cover container */
+        max-width: 100%;
+        height: auto; 
+        object-fit: cover; 
     }
 }
 @media screen and (min-width: 280px) and (max-width: 309px) {
@@ -231,8 +231,8 @@ button:hover{
         font-size: 60px;
     }
     .partneri img {
-        max-width: 50%; /* Adjust to your preference */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 50%;
+        height: auto; 
     }
     .maps {
         display: flex;
@@ -240,8 +240,8 @@ button:hover{
         align-items: center;
     }
     .maps img {
-        max-width: 100%; /* Adjust to your preference */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Maintain aspect ratio and cover container */
+        max-width: 100%; 
+        height: auto; 
+        object-fit: cover; 
     }
 }
