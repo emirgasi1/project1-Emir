@@ -15,6 +15,7 @@ html,body
     background-color: #0C3C60;
     opacity: 0.9;
 }
+
 .logo img{
 max-width: 60px;
 height: auto;
@@ -253,11 +254,19 @@ button:hover{
     display: flex;
     text-align: center;
 }
-
-@media screen and (min-width: 417px) and (max-width: 830px) {
+@media screen and (min-width: 831px) and (max-width: 1024px) {
     .header{
         font-size: 15px;
     }
+    .ime1{
+        font-size: 20px;
+    }
+    .logo img{
+        margin-left: 20px;
+        max-width: 60px;
+        height: auto;
+        width: 100px;
+        }
     .maps {
         display: flex;
         justify-content: center;
@@ -268,6 +277,73 @@ button:hover{
         height: auto; 
         object-fit: cover;
     }
+}
+@media screen and (min-width: 426px) and (max-width: 830px) {
+    .header{
+        font-size: 15px;
+    }
+    .ime1{
+        font-size: 10px;
+    }
+    .logo img{
+        margin-left: 20px;
+        max-width: 60px;
+        height: auto;
+        width: 100px;
+        }
+    .maps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .maps img {
+        max-width: 100%; 
+        height: auto; 
+        object-fit: cover;
+    }
+    #gumbic3{
+        margin-top: 103px;
+    }
+}
+@media screen and (min-width: 417px) and (max-width: 425px) {
+    .header{
+        font-size: 10px;
+    }
+    .achieve{
+        font-size: 70px;
+    }
+    .partneri img {
+        max-width: 50%; 
+        height: auto;
+    }
+    .maps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .maps img {
+        max-width: 100%;
+        height: auto; 
+        object-fit: cover; 
+    }
+    #togglebutton{
+
+            margin-left: 140px;
+
+    }
+    
+    #togglebutton .indicator{
+
+            margin-left: 140px;
+
+    }
+    
+    #togglebutton.active .indicator{
+
+            margin-left: 140px;
+
+    }
+
 }
 @media screen and (min-width: 310px) and (max-width: 416px) {
     .header{
@@ -314,3 +390,93 @@ button:hover{
     }
 }
 
+.image-gallery {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.gallery-slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-image {
+    max-width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.gallery-control.left {
+    left: 0;
+}
+
+.gallery-control.right {
+    right: 0;
+}
+
+.gallery-slider {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.gallery-slider {
+    width: 400%; 
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+#togglebutton{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background: white;
+    transition: 0.5s;
+    margin-top: 5px;
+}
+
+#togglebutton .indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 20px;
+
+}
+
+#togglebutton.active .indicator{
+    left: 100px;
+
+}
+body.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+#more{
+    display: none;
+}
+.read{
+    background-color: #072136;
+    border: none;
+    outline: none;
+    color: white;
+    ;
+}

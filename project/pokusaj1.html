@@ -14,7 +14,7 @@
     <div class="header"><!-- zavrseno-->
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <div class="logo">
                         <a href="pokusaj1.html">
                         <div class="ime1">
@@ -42,6 +42,11 @@
                             <il>Contact </il>
                         </a>
                         </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="togglebutton">
+                        <button id="togglebutton">Toggle Theme</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +93,8 @@
                             Services
                         </div>
                         <div class="text">
-                            Here, we offer tailored solutions aimed at maximizing your business's potential. From strategic planning to market expansion, our team is dedicated to providing you with the tools and strategies necessary to drive sustainable growth. With our expertise and personalized approach, we empower businesses like yours to achieve their growth objectives efficiently and effectively. Let us partner with you on your journey to success.
+                            Here, we offer tailored solutions aimed at maximizing your business's potential. From strategic planning to market expansion, our team is dedicated to providing you with the tools and strategies necessary to drive sustainable growth.<span id="tacka">...</span><span id="more"> With our expertise and personalized approach, we empower businesses like yours to achieve their growth objectives efficiently and effectively. Let us partner with you on your journey to success.</span>
+                            <button type="button" class="read">Read more</button>
                         </div>
                         <div class="info">
                             <a href="service.html">
@@ -102,7 +108,8 @@
                                 Projects
                             </div>
                             <div class="text">
-                                Explore our diverse portfolio of projects. Each endeavor showcases our commitment to excellence and innovation. From groundbreaking initiatives to transformative ventures, we take pride in our ability to deliver exceptional results. With a focus on quality and creativity, our projects are designed to make a lasting impact. Join us as we embark on new challenges and push the boundaries of possibility. Let's create something extraordinary together.
+                                Explore our diverse portfolio of projects. Each endeavor showcases our commitment to excellence and innovation. From groundbreaking initiatives to transformative ventures, <span id="tacka">...</span><span id="more">we take pride in our ability to deliver exceptional results. With a focus on quality and creativity, our projects are designed to make a lasting impact. Join us as we embark on new challenges and push the boundaries of possibility. Let's create something extraordinary together.</span>
+                                <button type="button" class="read">Read more</button>
                             </div>
                                 <div class="info">
                                     <a href="projekti.html">
@@ -116,11 +123,12 @@
                                 Clients
                             </div>
                             <div class="text">
-                                Discover the success stories of our esteemed clients. Through collaborative partnerships and strategic collaborations, we've helped businesses like yours achieve their goals and surpass expectations. Our client-centric approach ensures that we understand your unique needs and tailor our solutions to meet them effectively. With a proven track record of client satisfaction and loyalty, we take pride in building long-lasting relationships. 
+                                Discover the success stories of our esteemed clients. Through collaborative partnerships and strategic collaborations, we've helped businesses like yours achieve their goals and surpass expectations.<span id="tacka">...</span><span id="more"> Our client-centric approach ensures that we understand your unique needs and tailor our solutions to meet them effectively. With a proven track record of client satisfaction and loyalty, we take pride in building long-lasting relationships. </span>
+                                <button type="button" class="read">Read more</button>
                             </div>
                             <div class="info">
                                     <a href="#part">
-                                        <button class="gumbic">More info</button>
+                                        <button class="gumbic" id="gumbic3">More info</button>
                                     </a>
                             </div>
                         </div>
@@ -164,20 +172,23 @@
                             <div class="ourclients">
                                 Our clients
                             </div>
-                            <div class="partneri">
-                                <img src="pokusajimages/logo2.png">
-                                <img src="pokusajimages/logo3.png">
+                            <div class="image-gallery">
+                                <div class="gallery-slider">
+                                    <img src="pokusajimages/logo2.png" class="gallery-image" alt="Client Logo">
+                                    <img src="pokusajimages/logo3.png" class="gallery-image" alt="Client Logo">
+                                    <img src="pokusajimages/logo4.png" class="gallery-image" alt="Client Logo">
+                                    <img src="pokusajimages/logo1.png" class="gallery-image" alt="Client Logo">
+                                </div>
+                                <button class="gallery-control left" onclick="moveSlide(-1)">&#10094;</button>
+                                <button class="gallery-control right" onclick="moveSlide(1)">&#10095;</button>
                             </div>
                         <div class="col-md-4">
-                            <div class="partneri">
-                                <img src="pokusajimages/logo4.png">
-                                <img src="pokusajimages/logo1.png">
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
             <div class="sektor6"><!-- zavrseno-->
                 <div class="container">
                     <div class="row">
@@ -265,8 +276,10 @@
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="pokusaj1.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
 </body>
 </html>
