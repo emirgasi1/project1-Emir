@@ -291,6 +291,7 @@ button:hover{
         height: auto;
         width: 100px;
         }
+    
     .maps {
         display: flex;
         justify-content: center;
@@ -446,10 +447,13 @@ button:hover{
     display: block;
     width: 100px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 160px;
     background: white;
     transition: 0.5s;
     margin-top: 5px;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.5),
+                inset 0 8px 8px rgba(0, 0, 0, 0.5),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.5);
 }
 
 #togglebutton .indicator{
@@ -458,6 +462,10 @@ button:hover{
     left: 0;
     width: 50px;
     height: 20px;
+    background: linear-gradient(to bottom, #444,#222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    
 
 }
 
@@ -466,8 +474,34 @@ button:hover{
 
 }
 body.dark-theme {
-    background-color: black;
+    background-color: #191919;
     color: white;
+}
+body.dark-theme .lista ul a:hover,
+body.dark-theme .gumbic:hover,
+body.dark-theme .ourclients,
+body.dark-theme .service,
+body.dark-theme .projects,
+body.dark-theme .clients {
+    color: #4a90e2;  
+}
+body.dark-theme .header,
+body.dark-theme .sektor6{
+    background-color: #363535; 
+    color: #ccc;  
+}
+body.dark-theme .sektor7 {
+    background-color: #222222; 
+    color: #ccc;  
+}
+body.dark-theme .naslov,
+body.dark-theme .contact,
+body.dark-theme .inputs p {
+    color: #aaa; 
+}
+
+body.dark-theme .gallery-control {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #more{
@@ -479,4 +513,34 @@ body.dark-theme {
     outline: none;
     color: white;
     ;
+}
+#menu-btn{
+    display: none;
+}
+
+@media(max-width:991px){
+    #menu-btn {
+        display: inline-block;  /* Ensures the menu button is visible */
+        margin-left:400px ;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+    .header .lista {
+        display: none;  /* Hide the lista by default */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        width: 100%;  /* Full width */
+        z-index: 1050;  /* Ensure it is above other content */
+    }
+    .header .lista.active {
+        display: block;  /* Shows the lista when active class is added */
+    }
+}
+
+@media(max-width:771px){
+    .header .lista.active{
+        margin-top: 55px;
+    }
 }

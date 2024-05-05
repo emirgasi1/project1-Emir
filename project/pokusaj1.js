@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.querySelectorAll('.read').forEach(button => {
     button.addEventListener('click', function() {
-        const moreText = this.previousElementSibling; // Selects the .more span immediately preceding the button
-        const dots = moreText.previousElementSibling; // Selects the .tacka span immediately before the .more span
+        const moreText = this.previousElementSibling; //unutar read more element
+        const dots = moreText.previousElementSibling;//samo sa ...
         
         if (dots.style.display === "none") {
             dots.style.display = "inline";
@@ -51,6 +51,12 @@ document.querySelectorAll('.read').forEach(button => {
         }
     });
 });
+
+let navbar=document.querySelector('.lista');
+
+document.querySelector('#menu-btn').onclick=function(){
+    navbar.classList.toggle('active')
+}
 
 
 
