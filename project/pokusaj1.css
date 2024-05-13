@@ -177,12 +177,49 @@ button:hover{
     border: 1px solid #0C3B5F;
     margin-bottom: 100px;
 }
-.ourclients{
+.ourclients {
     display: flex;
     justify-content: center;
     text-align: center;
     font-weight: bolder;
     font-size: 40px;
+    margin-top: 50px;
+    color: #0C3B5F;
+}
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.gallery-image {
+    max-width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+    margin-left: 10px;
+}
+
+.gallery-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.gallery-control.left {
+    left: -30px;
+}
+
+.gallery-control.right {
+    right: 0;
 }
 .partneri{
     display: flex;
@@ -222,6 +259,22 @@ button:hover{
 .inputs p{
     color: white;
 }
+.inputs input[type="password"] {
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.inputs input[type="password"]:focus {
+    border-bottom: 2px solid blue;
+}
+
 .submit {
     display: flex;
     justify-content: center;
@@ -391,56 +444,7 @@ button:hover{
     }
 }
 
-.image-gallery {
-    position: relative;
-    width: 80%;
-    margin: auto;
-}
 
-.gallery-slider {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-}
-
-.gallery-image {
-    max-width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.gallery-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.gallery-control.left {
-    left: 0;
-}
-
-.gallery-control.right {
-    right: 0;
-}
-
-.gallery-slider {
-    display: flex;
-    overflow: hidden;
-    transition: transform 0.5s ease;
-}
-
-.gallery-slider {
-    width: 400%; 
-    display: flex;
-    overflow: hidden;
-    transition: transform 0.5s ease;
-}
 
 #togglebutton{
     position: relative;
