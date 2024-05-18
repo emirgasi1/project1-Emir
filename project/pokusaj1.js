@@ -120,4 +120,46 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 });
 
+$(document).ready(function() {
+    $("#submitForm").click(function() {
+        $("#contactForm").validate(); // Validate the form
+        if ($("#contactForm").valid()) {
+            $.ajax({
+                type: "POST",
+                url: "pokusaj1.json",
+                data: $("#contactForm").serialize(), // Serialize form data
+                success: function(response) {
+                    $("#message").html("<p>Form submitted successfully!</p>").css("color", "green");
+                    $("#contactForm")[0].reset(); // Reset the form
+                },
+                error: function(xhr, status, error) {
+                    $("#message").html("<p>Error submitting form. Please try again later.</p>").css("color", "red");
+                }
+            });
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const postsContainer = document.getElementById('posts-container');
+
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            data.posts.forEach(post => {
+                post.comments.forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.innerHTML = `
+                        <strong>${comment.user}</strong>: ${comment.comment}
+                    `;
+                    postsContainer.appendChild(commentElement);
+                });
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
+
   

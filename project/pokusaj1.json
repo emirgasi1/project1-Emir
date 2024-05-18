@@ -1,13 +1,32 @@
 {
-    "posts": [
+  "posts": [
       {
-        "title": "Post 1",
-        "content": "Content of post 1"
+          "title": "Post 1",
+          "content": "Content of post 1",
+          "comments": [
+              {
+                  "user": "User1",
+                  "comment": "Comment 1 for Post 1"
+              },
+              {
+                  "user": "User2",
+                  "comment": "Comment 2 for Post 1"
+              }
+          ]
       },
       {
-        "title": "Post 2",
-        "content": "Content of post 2"
+          "title": "Post 2",
+          "content": "Content of post 2",
+          "comments": [
+              {
+                  "user": "User3",
+                  "comment": "Comment 1 for Post 2"
+              },
+              {
+                  "user": "User4",
+                  "comment": "Comment 2 for Post 2"
+              }
+          ]
       }
-    ]
-  }
-  
+  ]
+}
