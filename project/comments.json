@@ -1,0 +1,14 @@
+[
+    {
+        "username": "User1",
+        "comment": "This is a great post!",
+        "timestamp": "2024-05-25 12:00:00"
+    },
+    {
+        "username": "User2",
+        "comment": "I learned a lot from this article.",
+        "timestamp": "2024-05-25 12:30:00"
+    }
+    
+]
+

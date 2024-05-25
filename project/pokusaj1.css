@@ -20,6 +20,7 @@ html,body
 max-width: 60px;
 height: auto;
 width: 100px;
+margin-left: 10px;
 }
 .ime1{
     display: flex;
@@ -204,7 +205,7 @@ button:hover{
 
 .gallery-control {
     position: absolute;
-    top: 50%;
+    top: 30%; /* Adjust this value to move the controls up or down */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -287,7 +288,8 @@ button:hover{
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all
+    0.3s ease;
 }
 
 .submit button:hover {
@@ -547,4 +549,68 @@ body.dark-theme .gallery-control {
     .header .lista.active{
         margin-top: 55px;
     }
+}
+
+
+#password-strength-container {
+    width: 70%;
+    background: #ddd;
+    height: 5px;
+    margin: 2rem;
+    display: flex;
+  }
+  
+  #password-strength {
+    height: 5px;
+    background-color: #e1e1e1;
+    width: 100%;
+  }
+  
+  .strength-weak {
+    background-color: red !important;
+    width: 150px;
+  }
+  
+  .strength-medium {
+    background-color: orange !important;
+    width: 200px;
+  }
+  
+  .strength-strong {
+    background-color: green !important;
+    width: 250px;
+  }
+
+
+  .comment {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+}
+.comment .username {
+    font-weight: bold;
+}
+.comment .timestamp {
+    font-size: 0.8em;
+    color: #999;
+}
+#comments-container{
+    margin-top: 50px;
+}
+
+#successMessage {
+    color: green;
+    text-align: center;
+}
+
+#errorMessage{
+    color: red;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+label.error {
+    display: block;
+    color: brown;
 }

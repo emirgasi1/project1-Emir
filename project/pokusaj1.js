@@ -96,43 +96,110 @@ $(document).ready(function() {
                 required: "Please enter a password",
                 minlength: "Your password must be at least 8 characters long"
             }
+        },
+        submitHandler: function(form) {
+            $(".inputs").addClass("hidden");
+            $("#successMessage").removeClass("hidden");
+            $("#errorMessage").addClass("hidden");
+            // Here you can submit the form using Ajax or any other method
+        },
+        invalidHandler: function(event, validator) {
+            $("#errorMessage").removeClass("hidden");
         }
     });
 });
 
 
-$(document).ready(function() {
-    // Function to load products from JSON file
-    function loadProducts() {
-        $.getJSON("pokusaj1.json", function(data) {
-            $.each(data, function(key, value) {
-                $("#product-list").append(
-                    `<tr>
-                        <td>${value.id}</td>
-                        <td>${value.name}</td>
-                        <td>${value.price}</td>
-                        <td>
-                            <button class="btn btn-primary btn-sm edit-btn">Edit</button>
-                            <button class="btn btn-danger btn-sm delete-btn">Delete</button>
-                        </td>
-                    </tr>`
-                );
-            });
-        });
+document.getElementById("password").addEventListener("input", function () {
+    const strengthIndicator = document.getElementById("password-strength");
+    const password = this.value;
+    let strength = 0;
+  
+    if (password.match(/[a-z]/)) {
+      strength += 1;
     }
+    if (password.match(/[A-Z]/)) {
+      strength += 1;
+    }
+    if (password.match(/[0-9]/)) {
+      strength += 1;
+    }
+    if (password.match(/[$@#!%*?&]/)) {
+      strength += 1;
+    }
+  
+    strengthIndicator.style.width = strength * 25 + "%";
+  
+    if (strength === 0) {
+      strengthIndicator.className = "";
+      strengthIndicator.style.width = "0%";
+    } else if (strength === 1) {
+      strengthIndicator.className = "strength-weak";
+    } else if (strength === 2) {
+      strengthIndicator.className = "strength-medium";
+    } else if (strength >= 3) {
+      strengthIndicator.className = "strength-strong";
+    }
+  });
 
-    // Load products when the page is ready
-    loadProducts();
 
-    // Event listener for edit button
-    $(document).on("click", ".edit-btn", function() {
-        // Your edit functionality here
-        console.log("Edit button clicked");
-    });
-
-    // Event listener for delete button
-    $(document).on("click", ".delete-btn", function() {
-        // Your delete functionality here
-        console.log("Delete button clicked");
+  $(document).ready(function() {
+    $.ajax({
+        url: 'comments.json',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            var commentsContainer = $('#comments-container');
+            data.forEach(function(comment) {
+                var commentElement = `
+                    <div class="comment"> 
+                        <div class="username">${comment.username}</div>
+                        <div class="timestamp">${comment.timestamp}</div>
+                        <div class="content">${comment.comment}</div>
+                    </div>
+                `;
+                commentsContainer.append(commentElement);
+            });
+        },
+        error: function(xhr, status, error) {
+            console.error('Error fetching comments:', status, error);
+        }
     });
 });
+
+$(document).ready(function() {
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Serialize form data
+        var formData = $(this).serialize();
+
+        // Simulate AJAX request to save form data
+        setTimeout(function() {
+            console.log('Data received:', formData); // For demonstration purposes
+            // Display success message using toastr
+            toastr.success('Data saved successfully!');
+            // Optionally clear the form
+            $('#contactForm')[0].reset();
+        }, 500); // Simulate a delay of 500ms
+
+        // Example for error handling (uncomment to use)
+        // setTimeout(function() {
+        //     console.error('Error saving data');
+        //     toastr.error('Failed to save data. Please try again.');
+        // }, 500); // Simulate a delay of 500ms
+    });
+});
+
+
+function loadDetails(productId) {
+    fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            const product = data.products.find(p => p.id === productId);
+            if (product) {
+                const details = document.getElementById('details');
+                details.innerHTML = `<h2>${product.name}</h2><p>${product.description}</p>`;
+            }
+        });
+}

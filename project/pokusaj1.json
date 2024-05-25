@@ -1,4 +1,0 @@
-[
-    { "productCode": "P001", "productName": "Product 1", "quantityInStock": 10, "status": "In Stock" },
-    { "productCode": "P002", "productName": "Product 2", "quantityInStock": 5, "status": "Out of Stock" }
-]

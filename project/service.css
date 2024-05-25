@@ -171,6 +171,37 @@ button:hover{
     text-align: center;
 }
 
+.product32{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    list-style-type: none; 
+}
+
+
+.gumbic{
+    margin-top: 10px;
+    padding: 15px 30px 15px 30px;
+}
+.gumbic a{
+    text-decoration: none;
+}
+.gumbic a:hover{
+    color: white;
+}
+.gumbic:hover{
+    background-color: #0C3B5F;
+    transition: 0.5s;
+    border: white;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid green;
+    background-color: #e6ffe6;
+    display: none;
+}
 @media screen and (min-width: 417px) and (max-width: 830px) {
     .header{
         font-size: 15px;
