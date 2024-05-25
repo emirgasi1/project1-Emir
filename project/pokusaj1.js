@@ -100,66 +100,39 @@ $(document).ready(function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const postsContainer = document.getElementById('posts-container');
-  
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        data.posts.forEach(post => {
-          const postElement = document.createElement('div');
-          postElement.innerHTML = `
-            <h2>${post.title}</h2>
-            <p>${post.content}</p>
-          `;
-          postsContainer.appendChild(postElement);
-        });
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-});
 
 $(document).ready(function() {
-    $("#submitForm").click(function() {
-        $("#contactForm").validate(); // Validate the form
-        if ($("#contactForm").valid()) {
-            $.ajax({
-                type: "POST",
-                url: "pokusaj1.json",
-                data: $("#contactForm").serialize(), // Serialize form data
-                success: function(response) {
-                    $("#message").html("<p>Form submitted successfully!</p>").css("color", "green");
-                    $("#contactForm")[0].reset(); // Reset the form
-                },
-                error: function(xhr, status, error) {
-                    $("#message").html("<p>Error submitting form. Please try again later.</p>").css("color", "red");
-                }
+    // Function to load products from JSON file
+    function loadProducts() {
+        $.getJSON("pokusaj1.json", function(data) {
+            $.each(data, function(key, value) {
+                $("#product-list").append(
+                    `<tr>
+                        <td>${value.id}</td>
+                        <td>${value.name}</td>
+                        <td>${value.price}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm edit-btn">Edit</button>
+                            <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                        </td>
+                    </tr>`
+                );
             });
-        }
+        });
+    }
+
+    // Load products when the page is ready
+    loadProducts();
+
+    // Event listener for edit button
+    $(document).on("click", ".edit-btn", function() {
+        // Your edit functionality here
+        console.log("Edit button clicked");
+    });
+
+    // Event listener for delete button
+    $(document).on("click", ".delete-btn", function() {
+        // Your delete functionality here
+        console.log("Delete button clicked");
     });
 });
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const postsContainer = document.getElementById('posts-container');
-
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            data.posts.forEach(post => {
-                post.comments.forEach(comment => {
-                    const commentElement = document.createElement('div');
-                    commentElement.innerHTML = `
-                        <strong>${comment.user}</strong>: ${comment.comment}
-                    `;
-                    postsContainer.appendChild(commentElement);
-                });
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
-});
-
-  
