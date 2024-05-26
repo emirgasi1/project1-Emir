@@ -192,14 +192,3 @@ $(document).ready(function() {
 });
 
 
-function loadDetails(productId) {
-    fetch('products.json')
-        .then(response => response.json())
-        .then(data => {
-            const product = data.products.find(p => p.id === productId);
-            if (product) {
-                const details = document.getElementById('details');
-                details.innerHTML = `<h2>${product.name}</h2><p>${product.description}</p>`;
-            }
-        });
-}
