@@ -309,7 +309,7 @@ button:hover{
     display: flex;
     text-align: center;
 }
-@media screen and (min-width: 831px) and (max-width: 1024px) {
+@media screen and (min-width: 832px) and (max-width: 1024px) {
     .header{
         font-size: 15px;
     }
@@ -332,21 +332,40 @@ button:hover{
         height: auto; 
         object-fit: cover;
     }
+    .info1{
+        padding-top: 22.5px;
+    }
+    .gallery-control.right {
+        right: -40px;
+    }
+    #weather-info ,p{
+        font-size: 20px;
+
+    }
+
+    #weather{
+        font-size: 30px;
+    }
 }
-@media screen and (min-width: 426px) and (max-width: 830px) {
+@media screen and (min-width: 426px) and (max-width: 831px) {
     .header{
         font-size: 15px;
     }
     .ime1{
-        font-size: 10px;
+        font-size: 50px;
     }
     .logo img{
         margin-left: 20px;
         max-width: 60px;
         height: auto;
-        width: 100px;
+        width: 80px;
         }
-    
+    .ime1 img{
+        margin-left: 30px;
+    }
+    .ime1 p{
+        font-size: 15px;
+    }
     .maps {
         display: flex;
         justify-content: center;
@@ -360,7 +379,25 @@ button:hover{
     #gumbic3{
         margin-top: 103px;
     }
+    .info1{
+        padding-top: 47px;
+    }
+    .info2{
+        padding-top: 47px;
+    }
+    .gallery-control.right {
+        right: -40px;
+    }
+    #weather-info ,p{
+        font-size: 15px;
+
+    }
+
+    #weather{
+        font-size: 30px;
+    }
 }
+
 @media screen and (min-width: 417px) and (max-width: 425px) {
     .header{
         font-size: 10px;
@@ -399,7 +436,20 @@ button:hover{
             margin-left: 140px;
 
     }
+    .gallery-image{
+        margin-left: 50px;
+    }
+    .gallery-control.left {
+        left: 1px;
+    }
+    #weather-info ,p{
+        font-size: 10px;
 
+    }
+
+    #weather{
+        font-size: 20px;
+    }
 }
 @media screen and (min-width: 310px) and (max-width: 416px) {
     .header{
@@ -421,6 +471,21 @@ button:hover{
         max-width: 100%;
         height: auto; 
         object-fit: cover; 
+    }
+    .togglebutton{
+        display: flex;
+        justify-content: center;
+    }
+    .gallery-control.left {
+        left: 1px;
+    }
+    #weather-info ,p{
+        font-size: 10px;
+
+    }
+
+    #weather{
+        font-size: 20px;
     }
 }
 @media screen and (min-width: 280px) and (max-width: 309px) {
@@ -448,36 +513,38 @@ button:hover{
 
 
 
-#togglebutton{
+#togglebutton {
     position: relative;
     display: block;
     width: 100px;
     height: 50px;
     border-radius: 160px;
     background: white;
-    transition: 0.5s;
+    transition: 0.2s;
     margin-top: 5px;
     box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.5),
                 inset 0 8px 8px rgba(0, 0, 0, 0.5),
                 inset 0 -4px 4px rgba(0, 0, 0, 0.5);
 }
 
-#togglebutton .indicator{
+#togglebutton .indicator {
     position: absolute;
     top: 0;
     left: 0;
     width: 50px;
     height: 20px;
-    background: linear-gradient(to bottom, #444,#222);
+    background: linear-gradient(to bottom, #444, #222);
     border-radius: 50%;
     transform: scale(0.9);
-    
-
+    transition: 0.5s;
 }
 
-#togglebutton.active .indicator{
-    left: 100px;
+#togglebutton.active {
+    background: black;
+}
 
+#togglebutton.active .indicator {
+    left: 50px;
 }
 body.dark-theme {
     background-color: #191919;
@@ -508,6 +575,15 @@ body.dark-theme .inputs p {
 
 body.dark-theme .gallery-control {
     background-color: rgba(255, 255, 255, 0.5);
+}
+body.dark-theme #weather-info{
+
+    background-image: linear-gradient(#DAF1F4,#B9E4EF);
+    color: transparent;
+}
+body.dark-theme  #weather{
+    background-image: linear-gradient(#DAF1F4,#B9E4EF);
+    color: transparent;
 }
 
 #more{
@@ -613,4 +689,29 @@ body.dark-theme .gallery-control {
 label.error {
     display: block;
     color: brown;
+}
+
+#weather-info{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 60px;
+    font-size: 2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(#030505,#B9E4EF);
+    background-clip: text;
+    color: transparent;
+}
+
+#weather{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(#030505,#B9E4EF);
+    background-clip: text;
+    color: transparent;
 }

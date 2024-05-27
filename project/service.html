@@ -20,7 +20,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="lista">
                     <ul><a href="about.html">
                         <il>About </il>
@@ -39,6 +39,11 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-md-2">
+                <div class="togglebutton">
+                    <button id="togglebutton"></button>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -52,29 +57,30 @@
                     </div>
                     <div class="image1">
                         <a href="consultation.html">
-                            <img src="pokusajimages/ljudi1.webp">
+                            <img src="pokusajimages/ljudi1.webp" alt="Consultation">
                         </a>
                     </div>
                     <div class="product32">
                         <h1>Products</h1>
                         <div id="productList">
                             <ul>
-                                <li>
+                                <li id="product-1">
                                     Product 1
                                     <button class="gumbic" onclick="loadDetails(1)">View More</button>
-                                    <button class="gumbic" onclick="editProduct(1)">Edit</button>
+                                    <button class="gumbic" onclick="showEditForm(1)">Edit</button>
                                     <button class="gumbic" onclick="deleteProduct(1)">Delete</button>
                                 </li>
-                                <li>
+                                <li id="product-2">
                                     Product 2
                                     <button class="gumbic" onclick="loadDetails(2)">View More</button>
-                                    <button class="gumbic" onclick="editProduct(2)">Edit</button>
+                                    <button class="gumbic" onclick="showEditForm(2)">Edit</button>
                                     <button class="gumbic" onclick="deleteProduct(2)">Delete</button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div id="details"></div>
+                    <div id="editFormContainer"></div>
                     <div id="message" class="message"></div>
                 </div>
             </div>

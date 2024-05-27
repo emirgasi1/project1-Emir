@@ -98,6 +98,7 @@ $(document).ready(function() {
             }
         },
         submitHandler: function(form) {
+            toastr.success('Form submitted successfully!');
             $(".inputs").addClass("hidden");
             $("#successMessage").removeClass("hidden");
             $("#errorMessage").addClass("hidden");
@@ -178,17 +179,56 @@ $(document).ready(function() {
         setTimeout(function() {
             console.log('Data received:', formData); // For demonstration purposes
             // Display success message using toastr
-            toastr.success('Data saved successfully!');
             // Optionally clear the form
             $('#contactForm')[0].reset();
         }, 500); // Simulate a delay of 500ms
-
-        // Example for error handling (uncomment to use)
-        // setTimeout(function() {
-        //     console.error('Error saving data');
-        //     toastr.error('Failed to save data. Please try again.');
-        // }, 500); // Simulate a delay of 500ms
     });
 });
 
 
+
+    function toggleComments() {
+        var comment1 = document.getElementById("comment1");
+        var comment2 = document.getElementById("comment2");
+
+        if (comment1.style.display === "none") {
+            comment1.style.display = "block";
+            comment2.style.display = "block";
+        } else {
+            comment1.style.display = "none";
+            comment2.style.display = "none";
+        }
+    }
+
+
+    const apiKey = '5331a1a4e6e3f511efb75ef5f86dc1d3';
+    const city = 'London'; // Example city name
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Process the data and display it on your website
+        const weatherInfo = document.getElementById('weather-info');
+        weatherInfo.innerHTML = `
+          <p>Temperature: ${data.main.temp} K</p>
+          <p>Description: ${data.weather[0].description}</p>
+          <p>Humidity: ${data.main.humidity} %</p>
+        `;
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error('There was a problem with the fetch operation:', error);
+      });
+
+
+      $(document).ready(function() {
+        $('#togglebutton').click(function() {
+            $(this).toggleClass('active');
+        });
+    });
+    
