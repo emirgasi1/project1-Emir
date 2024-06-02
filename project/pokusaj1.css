@@ -488,26 +488,15 @@ button:hover{
         font-size: 20px;
     }
 }
-@media screen and (min-width: 280px) and (max-width: 309px) {
-    .header{
-        font-size: 8px;
+@media (max-width: 1024px) {
+    .navbar-nav {
+        display: none;
     }
-    .achieve{
-        font-size: 60px;
+    .navbar-toggler {
+        display: block;
     }
-    .partneri img {
-        max-width: 50%; 
-        height: auto; 
-    }
-    .maps {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .maps img {
-        max-width: 100%; 
-        height: auto; 
-        object-fit: cover; 
+    .navbar-collapse.show .navbar-nav {
+        display: block;
     }
 }
 
