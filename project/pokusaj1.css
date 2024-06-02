@@ -616,7 +616,7 @@ body.dark-theme  #weather{
     }
 }
 
-
+/* password strenght css*/
 #password-strength-container {
     width: 70%;
     background: #ddd;
@@ -646,7 +646,7 @@ body.dark-theme  #weather{
     width: 250px;
   }
 
-
+/* log in */
   .comment {
     border: 1px solid #ddd;
     padding: 10px;
@@ -663,15 +663,7 @@ body.dark-theme  #weather{
     margin-top: 50px;
 }
 
-#successMessage {
-    color: green;
-    text-align: center;
-}
 
-#errorMessage{
-    color: red;
-    text-align: center;
-}
 .hidden {
     display: none;
 }
